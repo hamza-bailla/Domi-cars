@@ -10,7 +10,7 @@
   // dès le chargement, avant la ligne de déclaration d'origine -> évite la TDZ.
   let io;
 
-  const WA = '212661731841';
+  const WA = '212661178782';
   const waUrl = (txt) => `https://wa.me/${WA}?text=${encodeURIComponent(txt)}`;
 
   const ICON = {

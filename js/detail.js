@@ -6,7 +6,7 @@
   const $  = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const fmt = (n) => n.toLocaleString('fr-FR');
-  const WA = '212661731841';
+  const WA = '212661178782';
   const waUrl = (txt) => `https://wa.me/${WA}?text=${encodeURIComponent(txt)}`;
 
   const SVG = {
