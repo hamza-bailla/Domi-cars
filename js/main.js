@@ -6,6 +6,10 @@
   const $  = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 
+  // Déclaré ici (et non plus bas) : renderFleet() appelle observeReveals()
+  // dès le chargement, avant la ligne de déclaration d'origine -> évite la TDZ.
+  let io;
+
   const WA = '212661731841';
   const waUrl = (txt) => `https://wa.me/${WA}?text=${encodeURIComponent(txt)}`;
 
@@ -87,7 +91,6 @@
   const yr = $('#year'); if (yr) yr.textContent = new Date().getFullYear();
 
   /* ---------- reveals ---------- */
-  let io;
   function observeReveals(){
     if(!('IntersectionObserver' in window)){ $$('.reveal').forEach(el => el.classList.add('in')); return; }
     if(!io){

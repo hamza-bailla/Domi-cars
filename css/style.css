@@ -326,33 +326,101 @@ footer{background:var(--navy);color:#c4ccdb}
 @media(prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}}
 
 /* ============================================================
-   RESPONSIVE
+   RESPONSIVE  ·  Tablette & Mobile uniquement
+   (les styles desktop ci-dessus restent inchangés)
    ============================================================ */
+
+/* ---- Tablette paysage / petits portables (≤1080px) ---- */
 @media(max-width:1080px){
   .grid{grid-template-columns:repeat(2,1fr)}
   .gcards{grid-template-columns:repeat(2,1fr)}
   .feat-strip{grid-template-columns:repeat(2,1fr)}
   .detail-grid{grid-template-columns:1fr}
   .resa-card{position:static}
-  .foot-main{grid-template-columns:1fr 1fr;gap:2rem}
+  .foot-main{grid-template-columns:1.4fr 1fr 1fr;gap:2rem}
+  .foot-brand{grid-column:1/-1;max-width:none}
+  .foot-brand p{max-width:48ch}
 }
+
+/* ---- Tablette portrait (≤860px) ---- */
 @media(max-width:860px){
+  .nav{height:72px;gap:.6rem}
   .nav-links,.navphone,.lang{display:none}
   .burger{display:flex}
-  .nav-links.open{display:flex;position:absolute;top:80px;left:0;right:0;flex-direction:column;align-items:stretch;
-    background:#fff;padding:1rem clamp(18px,4vw,40px) 1.4rem;gap:.3rem;box-shadow:var(--shadow);border-bottom:1px solid var(--line)}
-  .hero-grid{grid-template-columns:1fr}
-  .hero-media{order:-1}
+  .nav-right{gap:.6rem}
+  /* menu mobile déroulant */
+  .nav-links.open{display:flex;position:absolute;top:72px;left:0;right:0;flex-direction:column;align-items:stretch;
+    background:#fff;padding:.8rem clamp(18px,4vw,40px) 1.2rem;gap:.2rem;box-shadow:var(--shadow);border-bottom:1px solid var(--line)}
+  .nav-links.open a{padding:.95rem 1rem;border-radius:12px;font-size:1rem;min-height:48px}
+  .burger{padding:10px}
+
+  .hero-grid{grid-template-columns:1fr;gap:2rem}
+  .hero-media{order:-1;width:100%;max-width:520px;margin:0 auto}
+  .hero h1,.hero p.lead{text-align:left}
+
   .cond-list{grid-template-columns:1fr}
+
+  /* footer en 2 colonnes lisibles */
+  .foot-main{grid-template-columns:1fr 1fr;gap:1.8rem 2rem}
+  .foot-brand{grid-column:1/-1}
 }
+
+/* ---- Mobile (≤620px) ---- */
 @media(max-width:620px){
   .grid{grid-template-columns:1fr}
-  .gcards{grid-template-columns:1fr}
+  .gcards{grid-template-columns:1fr 1fr}
   .feat-strip{grid-template-columns:1fr}
   .frow{grid-template-columns:1fr}
-  .d-specs{grid-template-columns:1fr}
+  .d-specs{grid-template-columns:1fr 1fr}
   .equip{grid-template-columns:1fr}
   .foot-main{grid-template-columns:1fr}
+  .foot-brand{grid-column:auto}
   .detail-bottom-cta{grid-template-columns:1fr}
   .vcard-actions{grid-template-columns:1fr}
+
+  /* en-tête compacte */
+  .nav{height:64px}
+  .nav-links.open{top:64px}
+  header .btn-orange{padding:.7rem 1.1rem;font-size:.9rem}
+  .brand .logo-chip img{height:32px}
+  .brand .bt b{font-size:.95rem}
+
+  /* hero : CTA pleine largeur, badges repositionnés dans le cadre */
+  .hero{padding-top:calc(64px + 1.8rem)}
+  .hero-cta{flex-direction:column;align-items:stretch}
+  .hero-cta .btn{width:100%}
+  .hero-trust{gap:.7rem 1.2rem;margin-top:1.4rem}
+  .hero-price{left:8px;bottom:8px;padding:.7rem 1rem}
+  .hero-price b{font-size:1.2rem}
+  .hero-badge{right:8px;top:8px;padding:.55rem .8rem;font-size:.74rem}
+
+  /* sections un peu plus serrées */
+  .section{padding:clamp(2.6rem,9vw,3.5rem) 0}
+  .filters{gap:.45rem;margin-bottom:1.8rem}
+  .chip{padding:.55rem 1rem;font-size:.84rem}
+
+  /* boutons : cible tactile confortable */
+  .btn{min-height:46px}
+  .btn-lg{padding:.95rem 1.6rem}
+
+  /* page détail : galerie & réservation */
+  .d-thumbs button{width:64px;height:46px}
+  .resa-head,.resa-body{padding-left:1.2rem;padding-right:1.2rem}
+
+  /* bas de footer empilé */
+  .foot-bottom{flex-direction:column;align-items:flex-start;gap:.6rem}
+
+  /* WhatsApp flottant un peu plus discret */
+  .wa-float{right:16px;bottom:16px;width:52px;height:52px}
+  .wa-float svg{width:26px;height:26px}
+}
+
+/* ---- Très petit mobile (≤380px) ---- */
+@media(max-width:380px){
+  .gcards{grid-template-columns:1fr}
+  .d-specs{grid-template-columns:1fr}
+  .brand .bt span{display:none}
+  header .btn-orange{padding:.6rem .9rem}
+  .hero h1{font-size:clamp(1.9rem,8vw,2.3rem)}
+  .vcard-specs{gap:.8rem}
 }
