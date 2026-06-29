@@ -1,5 +1,5 @@
 /* ============================================================
-   MEDNASS CAR — Page détail voiture (?car=id)
+   JACKPOT CARS — Page détail voiture (?car=id)
    ============================================================ */
 (() => {
   'use strict';
@@ -36,7 +36,7 @@
   const car = FLEET.find(c => c.id === id) || FLEET[0];
   const t = tiers(car.day);
   const brand = car.name.split(' ')[0];
-  document.title = `${car.name} — Location à ${VILLE} | MEDNASS CAR`;
+  document.title = `${car.name} — Location à ${VILLE} | JACKPOT CARS`;
 
   /* ============================================================
      LEFT COLUMN
@@ -93,7 +93,7 @@
         <div class="gcard"><span class="gi g4">${SVG.clock}</span><h4>Support rapide</h4><p>Réponse en moins de 5 min.</p></div>
       </div>
       <div class="detail-bottom-cta">
-        <a class="btn btn-green btn-lg" target="_blank" rel="noopener" href="${waUrl('Bonjour MEDNASS CAR, je souhaite réserver la ' + car.name + ' (' + t.jour + ' MAD/jour).')}">${SVG.wa} Réserver via WhatsApp</a>
+        <a class="btn btn-green btn-lg" target="_blank" rel="noopener" href="${waUrl('Bonjour JACKPOT CARS, je souhaite réserver la ' + car.name + ' (' + t.jour + ' MAD/jour).')}">${SVG.wa} Réserver via WhatsApp</a>
         <a class="btn btn-navy btn-lg" href="tel:+${WA}">${SVG.phone} Appeler</a>
       </div>
     </div>`;
@@ -231,7 +231,7 @@
   }
 
   /* ---------- chrome ---------- */
-  const waGeneric = waUrl('Bonjour MEDNASS CAR, je souhaite des informations.');
+  const waGeneric = waUrl('Bonjour JACKPOT CARS, je souhaite des informations.');
   ['#waFloat', '#footWa'].forEach(s => { const el = $(s); if(el) el.href = waGeneric; });
 
   const header = $('#header');

@@ -1,5 +1,5 @@
 /* ============================================================
-   MEDNASS CAR — Données du parc automobile
+   JACKPOT CARS — Données du parc automobile
    Tarifs : prix/jour de base · semaine = jour×6 · mois = jour×20
    ============================================================ */
 

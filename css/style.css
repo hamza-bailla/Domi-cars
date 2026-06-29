@@ -1,5 +1,5 @@
 /* ============================================================
-   MEDNASS CAR — Mohammedia
+   JACKPOT CARS — Mohammedia
    Thème clair · Orange & Bleu marine · style "Lux"
    ============================================================ */
 
@@ -293,6 +293,8 @@ footer{background:var(--navy);color:#c4ccdb}
 .foot-col a:hover{color:var(--orange)}
 .foot-contact li{display:flex;gap:.7rem;align-items:flex-start;color:#9aa6ba;font-size:.92rem;margin-bottom:1rem}
 .foot-contact li svg{width:18px;height:18px;color:var(--orange);flex:none;margin-top:2px}
+.foot-map{border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.12);box-shadow:var(--shadow-sm);margin-bottom:.5rem}
+.foot-map iframe{display:block;width:100%;height:240px;filter:grayscale(.15)}
 .foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding:1.4rem 0;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
 .foot-bottom small{color:#8190a8;font-size:.85rem}
 .foot-bottom .fb-links{display:flex;gap:1.6rem}
@@ -409,6 +411,7 @@ footer{background:var(--navy);color:#c4ccdb}
 
   /* bas de footer empilé */
   .foot-bottom{flex-direction:column;align-items:flex-start;gap:.6rem}
+  .foot-map iframe{height:200px}
 
   /* WhatsApp flottant un peu plus discret */
   .wa-float{right:16px;bottom:16px;width:52px;height:52px}
