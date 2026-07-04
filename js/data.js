@@ -1,9 +1,9 @@
 /* ============================================================
-   JACKPOT CARS — Données du parc automobile
+   Domi Car — Données du parc automobile
    Tarifs : prix/jour de base · semaine = jour×6 · mois = jour×20
    ============================================================ */
 
-const VILLE = 'Mohammedia';
+const VILLE = 'Laayoune';
 
 const FLEET = [
   {
@@ -14,7 +14,7 @@ const FLEET = [
     catLabel: 'Berline économique',
     tagline: "La référence qui ne déçoit jamais.",
     desc: "Sobre, fiable et incroyablement économe, la Logan est le choix malin pour la ville comme pour la route. Coffre généreux, climatisation et conduite douce : tout l'essentiel, sans superflu.",
-    day: 190,
+    day: 240,
     trans: 'Manuelle', fuel: 'Diesel', seats: 5, doors: 4, bags: 2, ac: true,
     img: ['Dacia Logan 2023.png', 'dacia logan blanche.jpg', 'dacia logan noir.webp'],
     featured: true
@@ -26,8 +26,8 @@ const FLEET = [
     cat: 'citadine',
     catLabel: 'Citadine',
     tagline: "Petite par la taille, grande par le caractère.",
-    desc: "Maniable, agile et parfaite pour se faufiler dans Mohammedia et Casablanca. La Sandero combine consommation minimale et habitabilité étonnante pour une citadine.",
-    day: 200,
+    desc: "Maniable, agile et parfaite pour se faufiler dans Laayoune et ses environs. La Sandero combine consommation minimale et habitabilité étonnante pour une citadine.",
+    day: 360,
     trans: 'Manuelle', fuel: 'Essence', seats: 5, doors: 4, bags: 2, ac: true,
     img: ['dacia sandero blanche.jpg', 'dacia sandero noir.jpg', 'dacia sandero 3eme generation.jpg']
   },
