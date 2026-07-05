@@ -1,12 +1,12 @@
 /* ============================================================
-   Domi Car — Page détail voiture (?car=id)
+   Laghrad Cars — Page détail voiture (?car=id)
    ============================================================ */
 (() => {
   'use strict';
   const $  = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const fmt = (n) => n.toLocaleString('fr-FR');
-  const WA = '212661830804';
+  const WA = '212661225423';
   const waUrl = (txt) => `https://wa.me/${WA}?text=${encodeURIComponent(txt)}`;
 
   const SVG = {
@@ -36,7 +36,7 @@
   const car = FLEET.find(c => c.id === id) || FLEET[0];
   const t = tiers(car.day);
   const brand = car.name.split(' ')[0];
-  document.title = `${car.name} — Location à ${VILLE} | Domi Car`;
+  document.title = `${car.name} — Location à ${VILLE} | Laghrad Cars`;
 
   /* ============================================================
      LEFT COLUMN
@@ -93,7 +93,7 @@
         <div class="gcard"><span class="gi g4">${SVG.clock}</span><h4>Support rapide</h4><p>Réponse en moins de 5 min.</p></div>
       </div>
       <div class="detail-bottom-cta">
-        <a class="btn btn-green btn-lg" target="_blank" rel="noopener" href="${waUrl('Bonjour Domi Car, je souhaite réserver la ' + car.name + ' (' + t.jour + ' MAD/jour).')}">${SVG.wa} Réserver via WhatsApp</a>
+        <a class="btn btn-green btn-lg" target="_blank" rel="noopener" href="${waUrl('Bonjour Laghrad Cars, je souhaite réserver la ' + car.name + ' (' + t.jour + ' MAD/jour).')}">${SVG.wa} Réserver via WhatsApp</a>
         <a class="btn btn-navy btn-lg" href="tel:+${WA}">${SVG.phone} Appeler</a>
       </div>
     </div>`;
@@ -231,7 +231,7 @@
   }
 
   /* ---------- chrome ---------- */
-  const waGeneric = waUrl('Bonjour Domi Car, je souhaite des informations.');
+  const waGeneric = waUrl('Bonjour Laghrad Cars, je souhaite des informations.');
   ['#waFloat', '#footWa'].forEach(s => { const el = $(s); if(el) el.href = waGeneric; });
 
   const header = $('#header');

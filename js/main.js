@@ -1,5 +1,5 @@
 /* ============================================================
-   Domi Car — Accueil (parc + filtres)
+   Laghrad Cars — Accueil (parc + filtres)
    ============================================================ */
 (() => {
   'use strict';
@@ -10,7 +10,7 @@
   // dès le chargement, avant la ligne de déclaration d'origine -> évite la TDZ.
   let io;
 
-  const WA = '212661830804';
+  const WA = '212661225423';
   const waUrl = (txt) => `https://wa.me/${WA}?text=${encodeURIComponent(txt)}`;
 
   const ICON = {
@@ -50,7 +50,7 @@
           <span class="per">/jour</span>
         </div>
         <div class="vcard-actions">
-          <a class="btn btn-green" href="${waUrl('Bonjour Domi Car, je suis intéressé(e) par la ' + c.name + ' (' + t.jour + ' MAD/jour). Est-elle disponible ?')}" target="_blank" rel="noopener">
+          <a class="btn btn-green" href="${waUrl('Bonjour Laghrad Cars, je suis intéressé(e) par la ' + c.name + ' (' + t.jour + ' MAD/jour). Est-elle disponible ?')}" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.06 24l1.69-6.16a11.86 11.86 0 1 1 4.43 4.34L.06 24zM6.6 20.2l.37.22a9.86 9.86 0 1 0-3.34-3.26l.24.38-1 3.65 3.73-.99z"/></svg>
             WhatsApp
           </a>
@@ -76,7 +76,7 @@
   });
 
   /* ---------- whatsapp links ---------- */
-  const waGeneric = waUrl('Bonjour Domi Car, je souhaite des informations sur la location d\'une voiture.');
+  const waGeneric = waUrl('Bonjour Laghrad Cars, je souhaite des informations sur la location d\'une voiture.');
   ['#waFloat', '#footWa', '#ctaWa'].forEach(sel => { const el = $(sel); if (el) el.href = waGeneric; });
 
   /* ---------- header chrome ---------- */

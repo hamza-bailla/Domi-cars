@@ -1,5 +1,5 @@
 /* ============================================================
-   Domi Car — Données du parc automobile
+   Laghrad Cars — Données du parc automobile
    Tarifs : prix/jour de base · semaine = jour×6 · mois = jour×20
    ============================================================ */
 
